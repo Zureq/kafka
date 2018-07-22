@@ -2,7 +2,7 @@ package com.zureq.kafkatest.producer.twitter;
 
 import com.google.gson.Gson;
 import com.twitter.hbc.core.Client;
-import com.zureq.kafkatest.KafkaService;
+import com.zureq.kafkatest.kafka.KafkaService;
 import com.zureq.kafkatest.model.twitter.TwitterMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package com.zureq.kafkatest;
+package com.zureq.kafkatest.kafka;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;

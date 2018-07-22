@@ -58,3 +58,6 @@ fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
+
+src/main/resources/application-secret.yml
+target/
