@@ -19,7 +19,7 @@ public class Receiver {
         return latch;
     }
 
-    @KafkaListener(topics = "${kafka.topic.boot}")
+    @KafkaListener(topics = "${kafka.topic.twitter}")
     public void receive(ConsumerRecord<?, ?> consumerRecord) {
         LOGGER.info("received payload='{}'", consumerRecord.toString());
         latch.countDown();

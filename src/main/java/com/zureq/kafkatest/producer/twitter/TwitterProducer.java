@@ -29,6 +29,9 @@ public class TwitterProducer {
     @Autowired
     private KafkaService kafkaService;
 
+    @Autowired
+    private String twitterKafkaTopic;
+
     /**
      * This method is the real consumer of the Twitter stream.
      * It connects to Twitter and waits for the incoming messages from Twitter.
@@ -52,7 +55,7 @@ public class TwitterProducer {
             TwitterMessage twitterMessage = gson.fromJson(jsonMessage, TwitterMessage.class);
             LOGGER.debug("Parsed twitter msg: {}", twitterMessage);
 
-            kafkaService.send(twitterMessage.getText());
+            kafkaService.send(twitterKafkaTopic, twitterMessage.getText());
         }
     }
 
